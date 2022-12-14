@@ -1,12 +1,8 @@
 import "./App.css";
-import { Button } from "reactstrap";
+
+import Layout from "./components/Layout/Layout";
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello Pizz Delivery </h1>
-      <Button className="btn-info">Send</Button>
-    </div>
-  );
+  return <Layout />;
 }
 
 export default App;
