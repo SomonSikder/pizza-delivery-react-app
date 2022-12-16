@@ -51,10 +51,15 @@
   border-radius: 5px;
   background-color: #212245;
 }
-.newsletter span {
-  background-color: #212245;
+.newsletter span i {
+  background-color: rgb(240, 65, 65);
   padding: 7px 20px;
+  border-radius: 5px;
   cursor: pointer;
+}
+.newsletter span i:hover {
+  background-color: #212245;
+  transition: 0.3s;
 }
 .newsletter span i {
   color: #fff;
@@ -68,12 +73,12 @@
 }
 .social-link span i {
   padding: 5px;
-  background-color: #212245;
+  background-color: rgb(240, 65, 65);
   color: #fff;
   border-radius: 50%;
 }
 .social-link span i:hover {
-  background-color: rgb(240, 65, 65);
+  background-color: #212245;
   color: #fff;
   transition: 0.3s;
 }
