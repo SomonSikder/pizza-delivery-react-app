@@ -45,6 +45,14 @@ function Home(props) {
   const [category, setCategory] = useState("ALL");
   const [allProducts, setAllProducts] = useState(products);
 
+  const [hotPizza, setHotPizza] = useState([]);
+
+  useEffect(() => {
+    const filteredPizza = products.filter((item) => item.category === "Pizza");
+    const slicePizza = filteredPizza.slice(0, 4);
+    setHotPizza(slicePizza);
+  }, []);
+
   useEffect(() => {
     if (category === "ALL") {
       setAllProducts(products);
@@ -228,15 +236,15 @@ function Home(props) {
         <Container>
           <Row>
             <Col lg="6" md="6">
-              <img src={whyImg} alt="why-tasty-treat" className="w-100" />
+              <img src={whyImg} alt="why-pizza-hatt" className="w-100" />
             </Col>
 
             <Col lg="6" md="6">
-              <div className="why__tasty-treat">
-                <h2 className="tasty__treat-title mb-4">
+              <div className="why-pizza-hatt">
+                <h2 className="pizza-hatt-title mb-4">
                   Why <span>Pizza Hatt?</span>
                 </h2>
-                <p className="tasty__treat-desc">
+                <p className="pizza-hatt-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolorum, minus. Tempora reprehenderit a corporis velit,
                   laboriosam vitae ullam, repellat illo sequi odio esse iste
@@ -278,6 +286,24 @@ function Home(props) {
                 </ListGroup>
               </div>
             </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="pt-0">
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5 ">
+              <h2>
+                Hot <span className="text-danger">Pizza</span>
+              </h2>
+            </Col>
+
+            {hotPizza.map((item) => (
+              <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
+                <ProductCard item={item} />
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>
