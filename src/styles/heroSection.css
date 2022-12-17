@@ -31,12 +31,16 @@
   background: transparent;
   border: 1px solid #df2020 !important;
 }
+.all-foods-btn a {
+  text-decoration: none;
+  color: #df2020 !important;
+}
 .all-foods-btn:hover {
   border: 1px solid #212245 !important;
+  width: 150px;
+  transition: width 0.3s;
 }
-.all-foods-btn a {
-  color: #df2020;
-}
+
 .hero-service p {
   color: #212245;
   font-weight: 600;
