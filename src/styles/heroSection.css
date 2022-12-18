@@ -53,3 +53,11 @@
   border-radius: 50%;
   font-weight: 500 !important;
 }
+
+@media only screen and (max-width: 768px) {
+  .hero-btns button {
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-weight: normal;
+  }
+}

@@ -106,7 +106,7 @@ function Home(props) {
                 </p>
                 <div className="hero-btns d-flex align-items-center gap-5 mt-4">
                   <button className="order-btn d-flex justify-content-center align-items-center gap-2">
-                    Order Now <i class="ri-arrow-right-line"></i>
+                    Order Now <i className="ri-arrow-right-line"></i>
                   </button>
                   <button className="all-foods-btn d-flex justify-content-center align-items-center ">
                     <Link to="/foods">See all Foods</Link>
@@ -115,14 +115,14 @@ function Home(props) {
                 <div className=" hero-service d-flex align-items-center gap-5 mt-5">
                   <p className="d-flex align-items-center gap-2">
                     <span className="shipping-icon">
-                      <i class="ri-car-line"></i>
+                      <i className="ri-car-line"></i>
                     </span>{" "}
                     No shipping charge!
                   </p>
 
                   <p className="d-flex align-items-center gap-2">
                     <span className="shipping-icon">
-                      <i class="ri-shield-check-line"></i>
+                      <i className="ri-shield-check-line"></i>
                     </span>{" "}
                     100% secure checkout
                   </p>
@@ -257,8 +257,8 @@ function Home(props) {
                 <ListGroup className="mt-4">
                   <ListGroupItem className="border-0 ps-0">
                     <p className=" choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Fresh and tasty
-                      foods
+                      <i className="ri-checkbox-circle-line"></i> Fresh and
+                      tasty foods
                     </p>
                     <p className="choose__us-desc">
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -268,7 +268,8 @@ function Home(props) {
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i> Quality support
+                      <i className="ri-checkbox-circle-line"></i> Quality
+                      support
                     </p>
                     <p className="choose__us-desc">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -278,7 +279,7 @@ function Home(props) {
 
                   <ListGroupItem className="border-0 ps-0">
                     <p className="choose__us-title d-flex align-items-center gap-2 ">
-                      <i class="ri-checkbox-circle-line"></i>Order from any
+                      <i className="ri-checkbox-circle-line"></i>Order from any
                       location{" "}
                     </p>
                     <p className="choose__us-desc">
@@ -303,7 +304,7 @@ function Home(props) {
             </Col>
 
             {hotPizza.map((item) => (
-              <Col lg="3" md="4" sm="6" xs="6" key={item.id}>
+              <Col lg="3" md="4" sm="6" xs="6" className="mt-3" key={item.id}>
                 <ProductCard item={item} />
               </Col>
             ))}

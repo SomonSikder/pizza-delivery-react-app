@@ -33,7 +33,7 @@
 
 .addTOCart__btn {
   border: none;
-  padding: 7px 25px;
+  padding: 5px;
   background: #df2020;
   color: #fff;
   border-radius: 5px;
@@ -48,7 +48,7 @@
     padding: 20px;
   }
   .addTOCart__btn {
-    padding: 5px 15px;
+    padding: 5px 8px;
     font-size: 0.7rem;
   }
 }

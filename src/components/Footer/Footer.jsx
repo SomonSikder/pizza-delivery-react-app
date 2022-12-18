@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="newsletter d-flex justify-content-center align-items-center">
               <input type="email" placeholder="Enter Your Email" />
               <span>
-                <i class="ri-send-plane-fill"></i>
+                <i className="ri-send-plane-fill"></i>
               </span>
             </div>
           </Col>
@@ -71,16 +71,16 @@ const Footer = () => {
               <span className="d-flex gap-2 ">
                 {" "}
                 <Link to={"www.facebook.com"}>
-                  <i class="ri-facebook-circle-line"></i>
+                  <i className="ri-facebook-circle-line"></i>
                 </Link>
                 <Link to={"www.instagram.com"}>
-                  <i class="ri-instagram-line"></i>
+                  <i className="ri-instagram-line"></i>
                 </Link>
                 <Link to={"www.youtube.com"}>
-                  <i class="ri-youtube-line"></i>
+                  <i className="ri-youtube-line"></i>
                 </Link>
                 <Link to={"www.twitter.com"}>
-                  <i class="ri-twitter-line"></i>
+                  <i className="ri-twitter-line"></i>
                 </Link>
               </span>
             </div>

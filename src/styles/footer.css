@@ -5,12 +5,12 @@
 }
 .footer-logo img {
   width: calc(100% - 80%);
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 .footer-logo h5 {
   font-weight: 600;
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .footer-logo p {
   font-size: 0.9rem;
@@ -36,10 +36,11 @@
 .newsletter {
   padding: 7px 15px;
   border: 1px solid #212245;
-  border-radius: 5px;
+  border-radius: 2px;
+  width: 220px;
 }
 .newsletter input {
-  width: calc(100% - 10%);
+  width: calc(100% - 20%);
   background-color: transparent;
   border: none;
   outline: none;
@@ -48,13 +49,13 @@
   outline: none;
 }
 .newsletter span {
-  border-radius: 5px;
-  background-color: #212245;
+  position: relative;
+  right: -22%;
 }
 .newsletter span i {
   background-color: rgb(240, 65, 65);
   padding: 7px 20px;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
 }
 .newsletter span i:hover {
