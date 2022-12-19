@@ -4,49 +4,42 @@ import { Link } from "react-router-dom";
 
 import CartItem from "./CartItem";
 
-// import { useDispatch, useSelector } from "react-redux";
-// import { cartUiActions } from "../../../store/shopping-cart/cartUiSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { cartUiActions } from "../../../store/shopping-cart/cartUiSlice";
 
 import "../../../styles/shopping-cart.css";
 
 const Carts = () => {
-  // const dispatch = useDispatch();
-  // const cartProducts = useSelector((state) => state.cart.cartItems);
-  // const totalAmount = useSelector((state) => state.cart.totalAmount);
+  const dispatch = useDispatch();
+  const cartProducts = useSelector((state) => state.cart.cartItems);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
 
-  // const toggleCart = () => {
-  //   dispatch(cartUiActions.toggle());
-  // };
+  const toggleCart = () => {
+    dispatch(cartUiActions.toggle());
+  };
 
   return (
     <div className="cart__container">
       <ListGroup className="cart">
         <div className="cart__close">
-          <span>
-            <i class="ri-close-fill"></i>
+          <span onClick={toggleCart}>
+            <i className="ri-close-fill"></i>
           </span>
         </div>
 
         <div className="cart__item-list">
-          {/* {cartProducts.length === 0 ? (
+          {cartProducts.length === 0 ? (
             <h6 className="text-center mt-5">No item added to the cart</h6>
           ) : (
             cartProducts.map((item, index) => (
               <CartItem item={item} key={index} />
             ))
-          )} */}
-          <CartItem></CartItem>
-          <CartItem></CartItem>
-          <CartItem></CartItem>
-          <CartItem></CartItem>
-          <CartItem></CartItem>
-          <CartItem></CartItem>
-          <CartItem></CartItem>
+          )}
         </div>
 
         <div className="cart__bottom d-flex align-items-center justify-content-between">
           <h6>
-            Subtotal : <span>$121.00</span>
+            Subtotal : <span>$ {totalAmount}</span>
           </h6>
           <button>
             <Link to="/checkout">Checkout</Link>

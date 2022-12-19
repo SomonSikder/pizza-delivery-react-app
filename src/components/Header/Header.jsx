@@ -4,7 +4,9 @@ import { Container } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
 import "../../styles/header.css";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { cartUiActions } from "../../store/shopping-cart/cartUiSlice";
 
 const nav_links = [
   {
@@ -29,9 +31,13 @@ const Header = () => {
   const menuRef = useRef(null);
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const toggleMenu = () => menuRef.current.classList.toggle("show-menu");
+
+  const toggleCart = () => {
+    dispatch(cartUiActions.toggle());
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -75,7 +81,7 @@ const Header = () => {
           </div>
           {/* =========Nav right icons========= */}
           <div className="nav-right d-flex align-items-center gap-3">
-            <span className="cart-icon">
+            <span className="cart-icon" onClick={toggleCart}>
               {" "}
               <i className="ri-shopping-bag-line"></i>
               <small className="cart-badge">{totalQuantity}</small>

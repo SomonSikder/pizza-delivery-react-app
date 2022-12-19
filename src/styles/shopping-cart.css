@@ -67,6 +67,7 @@
 }
 
 .cart__bottom button a {
+  text-decoration: none;
   color: #212245;
   font-weight: 600;
 }
