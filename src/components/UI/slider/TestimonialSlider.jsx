@@ -31,7 +31,7 @@ const TestimonialSlider = () => {
           </p>
           <div className=" slider__content d-flex align-items-center gap-3 ">
             <img src={ava01} alt="avatar" className=" rounded" />
-            <h6>Mohammad Somon Sider</h6>
+            <h6>Mohammad Somon Sikder</h6>
           </div>
         </div>
       </div>
