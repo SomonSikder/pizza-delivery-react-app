@@ -15,9 +15,6 @@ import ProductCard from "../components/UI/product-card/ProductCard";
 
 const FoodDetails = () => {
   const [tab, setTab] = useState("desc");
-  const [enteredName, setEnteredName] = useState("");
-  const [enteredEmail, setEnteredEmail] = useState("");
-  const [reviewMsg, setReviewMsg] = useState("");
   const { id } = useParams();
   const dispatch = useDispatch();
 
@@ -127,39 +124,29 @@ const FoodDetails = () => {
               ) : (
                 <div className="tab__form mb-3">
                   <div className="review pt-5">
-                    <p className="user__name mb-0">Jhon Doe</p>
-                    <p className="user__email">jhon1@gmail.com</p>
-                    <p className="feedback__text">great product</p>
+                    <p className="user__name mb-0">Farid Ahmed Shimul</p>
+                    <p className="user__email">faridahmedshimul@gmail.com</p>
+                    <p className="feedback__text">Delicious Food</p>
                   </div>
 
                   <div className="review">
-                    <p className="user__name mb-0">Jhon Doe</p>
-                    <p className="user__email">jhon1@gmail.com</p>
-                    <p className="feedback__text">great product</p>
+                    <p className="user__name mb-0">Mohammad Somon Sikder</p>
+                    <p className="user__email">somonsikder777@gmail.com</p>
+                    <p className="feedback__text">Great Meal</p>
                   </div>
 
                   <div className="review">
-                    <p className="user__name mb-0">Jhon Doe</p>
-                    <p className="user__email">jhon1@gmail.com</p>
-                    <p className="feedback__text">great product</p>
+                    <p className="user__name mb-0">Rashedul Islam Shovu</p>
+                    <p className="user__email">rashedulislamshovu@gmail.com</p>
+                    <p className="feedback__text">Great Food</p>
                   </div>
                   <form className="form" onSubmit={submitHandler}>
                     <div className="form__group">
-                      <input
-                        type="text"
-                        placeholder="Enter your name"
-                        onChange={(e) => setEnteredName(e.target.value)}
-                        required
-                      />
+                      <input type="text" placeholder="Enter your name" />
                     </div>
 
                     <div className="form__group">
-                      <input
-                        type="text"
-                        placeholder="Enter your email"
-                        onChange={(e) => setEnteredEmail(e.target.value)}
-                        required
-                      />
+                      <input type="text" placeholder="Enter your email" />
                     </div>
 
                     <div className="form__group">
@@ -167,8 +154,6 @@ const FoodDetails = () => {
                         rows={5}
                         type="text"
                         placeholder="Write your review"
-                        onChange={(e) => setReviewMsg(e.target.value)}
-                        required
                       />
                     </div>
 
