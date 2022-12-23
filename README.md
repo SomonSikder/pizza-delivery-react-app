@@ -1,4 +1,4 @@
-## Food Ordering App https://papaya-croquembouche-cdd8cd.netlify.app
+## Pizza Delivery App https://papaya-croquembouche-cdd8cd.netlify.app
 
 ### Features:
 
